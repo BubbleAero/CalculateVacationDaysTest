@@ -4,10 +4,9 @@ public class CalculateVacationDays {
     public int calculate(int income, int expenses, int threshold) {
         int money = 0; // сколько денег
         int monthOfRest = 0; // сколько месяцев отдыха
-
-        for (int month = 1; month <= 12; month++) {
+        for (int month = 1; month < 12; month++) {
             if (money >= threshold) { // можем отдыхать
-                money = money - expenses - (money / 2); //траты на отдых
+                money = money - expenses - (money/ 3); //траты на отдых
                 monthOfRest++;
             } else {
                 money += income - expenses;
